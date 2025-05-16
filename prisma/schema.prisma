@@ -10,7 +10,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -19,7 +19,7 @@ model Task {
   name        String
   description String
   completed   Boolean
-  createAdt  DateTime? @default(now())
+  createAdt   DateTime? @default(now())
   userId      Int?
   user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
