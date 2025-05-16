@@ -46,6 +46,14 @@ docker-compose up --build
 
 ---
 
+## 🔼 Criando as migrações com prisma
+
+```bash
+npx prisma migrate dev --name init
+```
+
+---
+
 ## ✅ Executando os testes
 
 ### Testes unitários
